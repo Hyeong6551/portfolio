@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import MyMain from './components/MyMain';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import { Routes, Route, Link } from 'react-router-dom';
+import BList from './pages/BList';
+import Outer from './components/Outer';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div>
+        <Routes>
+          <Route path='/' element={<MyMain/>}/>
+          <Route path='*' element={
+            <div style={{color:"red", fontWeight:"bold", marginTop:"4%", fontSize:"44px"}}>존재하지 않은 페이지입니다.</div>
+          }>
+
+          </Route>
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
