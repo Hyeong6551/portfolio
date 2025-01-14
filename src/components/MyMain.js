@@ -4,23 +4,24 @@ export default function MyMain(){
     
     return(
         <div>
+            {/* -- Carousel -- */}
              <Carousel>
                 <Carousel.Item>
-                    <ExampleCarouselImage text="First slide" />
+                    <img src='/image/a1.jpg' alt='react_portfolio'/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>First Protfolio</h3>
+                    <p>REACT</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <ExampleCarouselImage text="Second slide" />
+                    <img src='/image/a2.jpg' alt='java_portfolio'/>
                     <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Second Protfolio</h3>
+                    <p>Java</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <ExampleCarouselImage text="Third slide" />
+                    <img src='/image/a3.jpg' alt=''/>
                     <Carousel.Caption>
                     <h3>Third slide label</h3>
                     <p>
