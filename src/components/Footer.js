@@ -1,5 +1,7 @@
+import '../css/components.css';
+
 export default function Footer(){
     return(
-        <div style={{background:"black", color: "white", marginTop:"4%", padding:"4%"}}>Copyright</div>
+        <div className="footer">ⓒ 2025. hyeong's All Rights Reserved. </div>
     )
 }
