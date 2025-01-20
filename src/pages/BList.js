@@ -6,7 +6,7 @@ import '../css/MyMain.css'
 export default function BList(){
     // data.json 리스트 불러오기
     let logo = "Portfolio";
-    let [user, setUser] = useState();
+    let [user, setUser] = useState(null);
     function getUser(){
         axios.get('/user')
             .then( (response)=>{setUser(response.data)} )
@@ -15,7 +15,7 @@ export default function BList(){
     useEffect(()=>{getUser()},[])
 
     const navigate = useNavigate();
-    const goDetail = (id) => navigate('/board/detail/' + id);
+    const goDetail = (no) => navigate('/board/detail/' + no);
 
     // table 클릭 시 상세보기
 
@@ -25,12 +25,12 @@ export default function BList(){
         <div className="container my-5">
             <table className="table table-hover">
                 <caption>2025-01-13 조세형</caption>
-                <thead className="table table-dark">
+                <thead>
                     <tr>
                         <th scope="col" style={{width:"10%"}}>NO</th>
-                        <th scope="col" style={{width:"45%"}}>TITLE</th>
-                        <th scope="col" style={{width:"15%"}}>NAME</th>
-                        <th scope="col" style={{width:"25%"}}>AGE</th>
+                        <th scope="col" style={{width:"50%"}}>TITLE</th>
+                        <th scope="col" style={{width:"25%"}}>NAME</th>
+                        <th scope="col" style={{width:"15%"}}>AGE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@ export default function BList(){
                     user != null && user.map((li, index)=>(
                     <tr key={li.id} onClick={ ()=>{goDetail(li.id)} }>
                         <td>{index+1}</td>
-                        <td>{li.name}</td>
+                        <td>{li.title}</td>
                         <td>{li.name}</td>
                         <td>{li.age}</td>
                     </tr>
