@@ -8,7 +8,7 @@ REACT 게시판
 
 ## JAVA
 
-Bank mini Project(예정)
+도서 관리 프로젝트(예정)
 
 
 
