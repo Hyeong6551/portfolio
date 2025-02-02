@@ -14,7 +14,6 @@
     display: inline-block;
     user-select: none;
 }
-
 .skillBtn{
     width: 250px;
     height: 75px;
@@ -25,7 +24,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .myBtn:hover{
     transform: scale(0.95);
     border: 2px solid rgb(85, 120, 201);

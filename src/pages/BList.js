@@ -22,30 +22,32 @@ export default function BList(){
     return(
         <>
         <h3 className="mt-5" style={{fontWeight:"bolder"}}>{logo}</h3>
-        <div className="container my-5">
-            <table className="table table-hover">
-                <caption>2025-01-13 조세형</caption>
-                <thead>
-                    <tr>
-                        <th scope="col" style={{width:"10%"}}>NO</th>
-                        <th scope="col" style={{width:"50%"}}>TITLE</th>
-                        <th scope="col" style={{width:"25%"}}>NAME</th>
-                        <th scope="col" style={{width:"15%"}}>AGE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {
-                    user != null && user.map((li, index)=>(
-                    <tr key={li.id} onClick={ ()=>{goDetail(li.id)} }>
-                        <td>{index+1}</td>
-                        <td>{li.title}</td>
-                        <td>{li.name}</td>
-                        <td>{li.age}</td>
-                    </tr>
-                    ))
-                }
-                </tbody>
-            </table>
+        <div className="containerBox">
+            <div className="container my-5">
+                <table className="table table-hover">
+                    <caption>2025-01-13 조세형</caption>
+                    <thead className="table-primary">
+                        <tr>
+                            <th scope="col" style={{width:"10%"}}>NO</th>
+                            <th scope="col" style={{width:"50%"}}>TITLE</th>
+                            <th scope="col" style={{width:"25%"}}>NAME</th>
+                            <th scope="col" style={{width:"15%"}}>AGE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        user != null && user.map((li, index)=>(
+                        <tr key={li.id} onClick={ ()=>{goDetail(li.id)} }>
+                            <td>{index+1}</td>
+                            <td>{li.title}</td>
+                            <td>{li.name}</td>
+                            <td>{li.age}</td>
+                        </tr>
+                        ))
+                    }
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div className="text-end my-5">
             <Link to='/board/write' className="btn btn-primary">글쓰기</Link>
