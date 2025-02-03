@@ -53,11 +53,11 @@ export default function MyMain(){
                 <h3 id="mySkill">My Skill</h3>
                 <div className="display">
                     <div className="skillBtn">REACT</div>
-                    <p className='scriptBox'>REACT 게시판</p>
+                    <p className='scriptBox'>REACT CRUD 게시판</p>
                 </div>
                 <div className="display">
                     <div className="skillBtn">JAVA</div>
-                    <p className='scriptBox'>Bank mini Project</p>
+                    <p className='scriptBox'>도서관리 프로그램</p>
                 </div>
             </div>
 
